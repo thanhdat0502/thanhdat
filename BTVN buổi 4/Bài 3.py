@@ -1,17 +1,22 @@
-n = int(input("Nhập số phần tử của mảng a: "))
-
-a = []
-for i in range(n):
-    s = input(f"Nhập phần tử thứ {i }: ")
-    a.append(s)
-
-b = tuple(a)
-
-print("Tuple b:", b)
-
-count = 0
-for item in b:
-    if item.isdigit():  
-        count += 1
-
-print("Số phần tử có dạng số trong tuple b là:", count)
+mA = int(input("Nhap so luong day a : "))
+a = set()
+for i in range(mA) :
+    num1 = int(input(f"a[{i}] = "))
+    a.add(num1)
+mB = int(input("Nhap so luong day b : "))
+b = set()
+for i in range(mB) :
+    num2 = int(input(f"b[{i}] = "))
+    b.add(num2)
+n = int(input("Nhap so phan tu : "))
+c = []
+for i in range(n) :
+    num = int(input(f"c[{i}] = "))
+    c.append(num)
+hp = 0
+for num in c :
+    if num in a :
+        hp += 1
+    if num in b :
+        hp -= 1
+print(f"Muc do hanh phuc : {hp}")
